@@ -17,6 +17,9 @@ importers:
       express:
         specifier: ^4.21.2
         version: 4.21.2
+      nodemon:
+        specifier: ^3.1.9
+        version: 3.1.9
       pg:
         specifier: ^8.13.3
         version: 8.13.3
@@ -26,10 +29,6 @@ importers:
       slonik:
         specifier: ^46.4.0
         version: 46.4.0(zod@3.24.2)
-    devDependencies:
-      nodemon:
-        specifier: ^3.1.9
-        version: 3.1.9
 
 packages:
 
@@ -225,6 +224,11 @@ packages:
 
   fsevents@2.3.2:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+
+  fsevents@2.3.3:
+    resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
@@ -742,7 +746,7 @@ snapshots:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
 
   concat-map@0.0.1: {}
 
@@ -860,6 +864,9 @@ snapshots:
   fresh@0.5.2: {}
 
   fsevents@2.3.2:
+    optional: true
+
+  fsevents@2.3.3:
     optional: true
 
   function-bind@1.1.2: {}
