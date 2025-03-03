@@ -9,10 +9,10 @@ dotenv.config();
 const app = express();
 const port = process.env.SERVER_PORT || 5000;
 
-// ✅ Enable CORS for all requests
+
 app.use(cors());
 
-// ✅ Customize CORS if needed (optional)
+
 app.use(cors({
     origin: '*', // Allow all origins (use specific domains in production)
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
@@ -28,7 +28,7 @@ app.use(cors({
 
     app.use('/api', routes);
 
-    app.get('/', (req, res) => res.send("API is running..."));
+    app.get('/', (req, res) => res.send("API is healthy"));
 
     app.listen(port, () => console.log(`Server running on port ${port}`));
 })();
