@@ -3,6 +3,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import axios from "axios";
 
+const API = import.meta.env.VITE_API_URL;
+
 export default function Landing() {
   const [quotes, setQuotes] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -13,7 +15,7 @@ export default function Landing() {
 
   const fetchQuotes = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/quotes");
+      const response = await axios.get(`${API}/api/quotes`);
       setQuotes(response.data);
       setLoading(false);
     } catch (error) {
