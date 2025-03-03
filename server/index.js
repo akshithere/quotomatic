@@ -9,12 +9,9 @@ dotenv.config();
 const app = express();
 const port = process.env.SERVER_PORT || 5000;
 
-
-app.use(cors());
-
-
+// Apply CORS middleware only once with your configuration
 app.use(cors({
-    origin: '*', // Allow all origins (use specific domains in production)
+    origin: 'https://quotomatic.akcelify.xyz',
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
 }));
